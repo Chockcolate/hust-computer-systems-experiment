@@ -1,0 +1,11 @@
+
+sudo apt install -y gcc-x86-64-linux-gnu
+x86_64-linux-gnu-gcc -g -fno-stack-protector -no-pie -fcf-protection=none -z execstack -DU3 \verinfo.c bufbomb.c buf.c -o bufbomb_x86
+qemu-x86_64-static ./bufbomb_x86 STUDENT_ID smoke_hex.txt 0
+sudo apt install gdb-multiarch
+gdb-multiarch ./bufbomb_x86
+(gdb) break getbuf
+(gdb) run STUDENT_ID smoke_hex.txt 0
+(gdb) step
+(gdb) p $rbp
+(gdb) p &buf

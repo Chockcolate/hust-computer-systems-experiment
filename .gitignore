@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+.vscode/
+*.o
+*.out
+*.exe
+*.dll
+*.dSYM/
+*.log
+*.tmp
+*.swp
+*.qcow2

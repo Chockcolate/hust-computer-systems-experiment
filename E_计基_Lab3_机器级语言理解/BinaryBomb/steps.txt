@@ -1,0 +1,4 @@
+cd ~/Desktop/Lab3/BinaryBomb
+gdb-multiarch ./binarybomb
+set architecture i386:x86-64
+disas phase_1
